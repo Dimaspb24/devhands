@@ -1,6 +1,12 @@
 spring:
   application:
     name: devhands
+  flyway:
+    schemas:
+      - public
+      - product
+  jpa:
+    show-sql: true
 
 openapi:
   product:
@@ -16,5 +22,9 @@ springdoc:
 
 logging:
   level:
+    sql: INFO
     root: INFO
     org.springframework: INFO
+
+server:
+  port: 8080

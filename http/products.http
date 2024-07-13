@@ -1,21 +1,8 @@
 ###
-
-GET http://localhost:8080/actuator
-
-###
-
-GET http://localhost:8080/swagger-ui
+GET http://localhost:8080/product-api/v0/products
 
 ###
-GET http://localhost:8080/catalogue-api/v0/products
-
-
-###
-GET http://92.118.113.155:8080/catalogue-api/v0/products
-
-
-###
-POST http://localhost:8080/catalogue-api/v0/products
+POST http://localhost:8080/product-api/v0/products
 Content-Type: application/json
 
 {
@@ -24,16 +11,25 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:8080/catalogue-api/v0/products
+PUT http://localhost:8080/product-api/v0/products
 Content-Type: application/json
 
 {
-  "title": "",
-  "description": ""
+  "id": 2,
+  "title": "New title",
+  "description": "New Description"
 }
 
 ###
-GET http://localhost:8080/catalogue-api/v0/products/{{productId}}
+GET http://localhost:8080/product-api/v0/products/2
 
 ###
-DELETE http://localhost:8080/catalogue-api/v0/products/{{productId}}
+DELETE http://localhost:8080/product-api/v0/products/1
+
+
+
+###
+GET http://localhost:8080/actuator
+
+###
+GET http://localhost:8080/swagger-ui
